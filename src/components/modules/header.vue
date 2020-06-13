@@ -37,22 +37,6 @@ export default {
         inputShow(){
             this.inputChecked = !this.inputChecked
         },
-<<<<<<< HEAD:src/components/header.vue
-        searchCity(){
-            this.$axios.get(`http://wthrcdn.etouch.cn/weather_mini?city=${this.whereCity}`).then(res => {
-            this.city = res.data.data.city;
-            let high = res.data.data.forecast[0].high;
-            let low = res.data.data.forecast[0].low;
-            this.type = res.data.data.forecast[0].type;
-            this.high = high.slice(3);
-            this.low = low.slice(3);
-            this.whereCity = "";
-            this.inputChecked = false;
-            }).catch(()=>{
-              this.$message({type:"error",message:"这不是一个城市,请输入城市"})
-              this.whereCity = ""
-            })
-=======
         searchCity:function(){
               this.$axios.get(`http://wthrcdn.etouch.cn/weather_mini?city=${this.whereCity}`).then(res => {
               this.city = res.data.city;
@@ -67,7 +51,6 @@ export default {
                 this.whereCity=''
               })
         
->>>>>>> 1dd5354fec64a4f6abcff3b32165614a44ef2319:src/components/modules/header.vue
         }
         
     },
